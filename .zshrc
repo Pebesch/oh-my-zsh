@@ -13,19 +13,28 @@ COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="yyyy-mm-dd"
 
+# History configuration
+HISTSIZE=50000
+SAVEHIST=50000
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt SHARE_HISTORY
+
 plugins=(
-	git,
-	docker,
-	docker-compose,
-	sudo,
-	history,
-	history-substring-search,
-	colored-man-pages,
-	zsh-autosuggestions,
-	zsh-syntax-highlighting,
-	copyfile,
+	git
+	docker
+	docker-compose
+	sudo
+	history
+	history-substring-search
+	colored-man-pages
+	copyfile
 	cp
 )
+
+source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -38,12 +47,3 @@ plugins=(
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# History configuration
-HISTSIZE=50000
-SAVEHIST=50000
-setopt EXTENDED_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt SHARE_HISTORY
