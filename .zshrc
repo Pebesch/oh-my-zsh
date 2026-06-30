@@ -19,6 +19,7 @@ plugins=(
 	docker-compose,
 	sudo,
 	history,
+	history-substring-search,
 	colored-man-pages,
 	zsh-autosuggestions,
 	zsh-syntax-highlighting,
